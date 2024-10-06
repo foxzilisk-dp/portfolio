@@ -1,0 +1,246 @@
+/*
+
+Stimulus Template
+
+http://www.templatemo.com/tm-498-stimulus
+
+*/
+
+
+/*---------------------------------------
+    Typorgraphy              
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-style: normal;
+  font-weight: 300;
+}
+
+h1,h2,h3 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 42px;
+  padding-bottom: 14px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 52px;
+  margin-top: 0px;
+}
+
+#service h3 {
+  font-size: 26px;
+  line-height: 32px;
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+#service h4 {
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+h5 {
+  color: #666666;
+}
+
+strong {
+  color: #232B2B;
+  font-weight: normal;
+}
+
+p {
+    color: #888;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+}
+
+.section-btn {
+  background-color: transparent;
+  border: 3px solid #232B2B;
+  border-radius: 100px;
+  color: #232B2B;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  padding: 12px 36px;
+  margin-top: 42px;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+}
+
+.section-btn:hover {
+  background: #49618C;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.btn-success:focus {
+  background-color: #000;
+  border-color: transparent;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+#service,
+#experience,
+#education,
+#contact {
+  position: relative;
+}
+
+#home .container,
+#experience .container,
+#service .container,
+#education .container,
+#contact .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#experience .experience-thumb,
+#education .education-thumb  {
+  padding: 22px 42px 42px 42px;
+}
+
+#service,
+#quotes,
+footer {
+  text-align: start;
+}
+
+#experience,
+#education {
+  background: #E9724C;
+}
+
+.background-image {
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    min-height: 75vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-yellow {
+  color: #49618C;
+}
+
+.bg-yellow {
+  background: #49618C;
+}
+
+.bg-orange {
+  background: #EF885F;
+}
+
+.bg-white {
+  background: #f3f3f3;
+}
+
+.bg-dark {
+  background: #263959;
+}
+
+/*---------------------------------------
+    General               
+-----------------------------------------*/
+
+html{
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #49618C;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+a:hover, a:active, a:focus {
+  color: #49618C;
+  outline: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/*---------------------------------------
+    Service section              
+-----------------------------------------*/
+#service .row {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+#service .col-md-3 {
+  display: flex; /* Enables flexbox for children */
+  flex-direction: column; /* Aligns children vertically */
+  justify-content: space-between; /* Distributes space evenly */
+}
+
+.service-thumb {
+  flex: 1; /* Makes each service-thumb take equal height */
+  padding: 20px; /* Optional: adjust as needed for spacing */
+  box-sizing: border-box; /* Ensures padding does not affect height */
+  text-align: center;
+}
+
+.service-thumb i {
+  font-size: 40px; /* Adjust icon size */
+  margin-bottom: 20px; /* Space between icon and title */
+}
+
+.color-white {
+  color: white; /* Adjust text color to white */
+}
+
+li {
+  list-style-type: none; /* Remove bullet points from list items */
+  text-align: start;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-thumb {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+}
+
