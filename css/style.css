@@ -1057,7 +1057,7 @@ figure {
 }
 
 .resume-blog .blog-text h3 a {
-  color: black;
+  color: #263959;
 }
 
 #resume-consult {
@@ -1574,7 +1574,7 @@ input[type='text'] {
   list-style-type: none;
   /* Remove bullet points from list items */
   text-align: start;
-  color: black;
+  color: #263959;
   font-size: 14px;
 }
 
@@ -1669,7 +1669,7 @@ input[type='text'] {
   padding-bottom: 4px;
   text-align: center;
   font-weight: 600;
-  color: black;
+  color: #263959;
 }
 
 #service h4 {
@@ -1685,4 +1685,26 @@ input[type='text'] {
     height: auto;
     /* Allow height to adjust on smaller screens */
   }
+}
+
+#resume-skills h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #263959;
+}
+
+#resume-skills h3 {
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 4px;
+  text-align: center;
+  font-weight: 600;
+  color: #263959;
+}
+
+#resume-skills .progress-wrap h3 {
+  text-align: start;
+  color: #263959;
+  font-size: 14px;
 }
