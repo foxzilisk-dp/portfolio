@@ -135,7 +135,7 @@
 
   // Loading page
   var loaderPage = function () {
-    $('.resume-loader').fadeOut('slow')
+    $('.loader').fadeOut('slow')
   }
 
   $(function () {
