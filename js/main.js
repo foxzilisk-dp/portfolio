@@ -113,15 +113,15 @@
       lineWidth: 15,
       lineCap: 'butt',
       barColor: '#263959',
-      trackColor: '#ef885f7a',
+      trackColor: '#337ab78a',
       size: 160,
       animate: 1000
     })
   }
 
   var skillsWayPoint = function () {
-    if ($('#resume-skills').length > 0) {
-      $('#resume-skills').waypoint(
+    if ($('#skills').length > 0) {
+      $('#skills').waypoint(
         function (direction) {
           if (direction === 'down' && !$(this.element).hasClass('animated')) {
             setTimeout(pieChart, 400)
@@ -144,7 +144,6 @@
     loaderPage()
     fullHeight()
     parallax()
-    // pieChart();
     skillsWayPoint()
   })
 })()

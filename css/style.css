@@ -22,6 +22,17 @@ body {
   background: #fff;
 }
 
+section {
+  padding: 10px;
+  margin: 100px auto;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin: 50px auto;
+  }
+}
+
 /* =======================================================
 *
 * 	Page Style 
@@ -93,6 +104,32 @@ figure {
   font-family: 'Space Mono', Arial, serif;
   font-weight: 400;
   margin: 0 0 20px 0;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+
+  h1,
+  h2,
+  h4,
+  h5,
+  h6,
+  figure {
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 28px;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin: 0;
+    text-align: start;
+    padding-bottom: 0;
+    font-size: 18px;
+  }
 }
 
 ::-webkit-selection {
@@ -131,7 +168,7 @@ figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(105, 105, 105, 0.2);
+  background: rgba(105, 105, 105, 0.3);
 }
 
 .cover .display-t {
@@ -153,6 +190,7 @@ figure {
 }
 
 .cover .display-tc h3 {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   color: #1D2738;
@@ -227,14 +265,12 @@ figure {
   margin-bottom: 30px;
 }
 
-.cover .display-tc h3 {
-  font-size: 16px;
-}
-
 @media screen and (max-width: 768px) {
 
   .cover .display-tc h3 {
     font-size: 14px;
+    color: #000;
+    text-align: center;
   }
 }
 
@@ -256,17 +292,6 @@ figure {
 * 	About
 *
 * ======================================================= */
-/* Center the h1 and apply margins */
-#about h1 {
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-/* Ensure the entire section has responsive margins */
-#about {
-  margin: 100px auto;
-}
-
 .info {
   margin: 0 0 0 20px;
   padding: 0;
@@ -513,12 +538,8 @@ fieldset[disabled] .btn-default.active {
 * 	Resume
 *
 * ======================================================= */
-#resume {
-  margin: 100px 0;
-}
-
 #resume .bg-color {
-  background-color: rgba(103, 103, 103, 0.2);
+  background-color: rgba(103, 103, 103, 0.3);
 }
 
 .timeline {
@@ -755,63 +776,157 @@ fieldset[disabled] .btn-default.active {
 
 /* =======================================================
 *
-* 	About
+* 	Service
 *
 * ======================================================= */
-.progress-wrap {
+#service .row {
+  display: flex;
+  flex-wrap: wrap;
+  /* Ensures responsiveness on smaller screens */
+}
+
+#service .col-md-3 {
+  display: flex;
+  /* Enables flexbox for children */
+  flex-direction: column;
+  /* Aligns children vertically */
+  justify-content: space-between;
+  /* Distributes space evenly */
+}
+
+.service-thumb {
+  flex: 1;
+  /* Makes each service-thumb take equal height */
+  padding: 20px 10px;
+  /* Optional: adjust as needed for spacing */
+  box-sizing: border-box;
+  /* Ensures padding does not affect height */
+  text-align: center;
+}
+
+.service-thumb i {
+  font-size: 30px;
+  /* Adjust icon size */
+  color: white;
+}
+
+#service .bg-blue li,
+.bg-dark-blue li,
+.bg-orange li {
+  list-style-type: none;
+  /* Remove bullet points from list items */
+  text-align: start;
+  color: white;
+  font-size: 14px;
+}
+
+#service .bg-white li {
+  list-style-type: none;
+  /* Remove bullet points from list items */
+  text-align: start;
+  color: #263959;
+  font-size: 14px;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+#service {
+  position: relative;
+}
+
+#service .container,
+.container {
   width: 100%;
-  float: left;
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
 }
 
-.progress-wrap h3 {
-  font-size: 16px;
-  display: block;
-  margin-bottom: 10px;
-  float: left;
+#service {
+  text-align: start;
+}
+
+#service .background-image {
+  background-position: 50% 50% !important;
+  background-size: cover !important;
   width: 100%;
+  height: 100%;
+  min-height: 75vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.progress-wrap h3 .name-left {
-  float: left;
+#service .bg-blue {
+  background: #49618C;
 }
 
-.progress-wrap h3 .value-right {
-  float: right;
+#service .bg-orange {
+  background: #EF885F;
 }
 
-.progress {
-  width: 100%;
-  float: left;
-  height: 5px;
-  box-shadow: none;
+#service .bg-white {
+  background: white;
 }
 
-.progress-bar {
-  background-color: #1D2738;
-  height: 5px;
-  display: block;
-  box-shadow: none;
+#service .bg-dark-blue {
+  background: #263959;
 }
 
-.progress-bar.progress-bar-1 {
-  background-color: #2980b9 !important;
+#service .bg-blue h3,
+.bg-dark-blue h3,
+.bg-orange h3 {
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 4px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
 }
 
-.progress-bar.progress-bar-2 {
-  background-color: #c0392b !important;
+#service .bg-white h3 {
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 4px;
+  text-align: center;
+  font-weight: 600;
+  color: #263959;
 }
 
-.progress-bar.progress-bar-3 {
-  background-color: #d35400 !important;
+#service h4 {
+  font-size: 20px;
+  line-height: 32px;
+  padding-bottom: 6px;
+  text-align: center;
 }
 
-.progress-bar.progress-bar-4 {
-  background-color: #8e44ad !important;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-thumb {
+    height: auto;
+    /* Allow height to adjust on smaller screens */
+  }
 }
 
-.progress-bar.progress-bar-5 {
-  background-color: #27ae60 !important;
+/* =======================================================
+*
+* 	Skills
+*
+* ======================================================= */
+#skills h3 {
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#skills ul {
+  text-align: start;
 }
 
 .chart {
@@ -923,19 +1038,19 @@ fieldset[disabled] .btn-default.active {
   transform: translate3d(0, 0, 0);
 }
 
-.resume-blog {
+.blog {
   width: 100%;
   float: left;
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
-  .resume-blog {
+  .blog {
     width: 100%;
   }
 }
 
-.resume-blog .blog-bg {
+.blog.blog-bg {
   display: block;
   width: 100%;
   background-size: cover;
@@ -946,18 +1061,18 @@ fieldset[disabled] .btn-default.active {
 }
 
 @media screen and (max-width: 768px) {
-  .resume-blog .blog-bg {
+  .blog.blog-bg {
     height: 400px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .resume-blog .blog-bg {
+  .blog.blog-bg {
     height: 270px;
   }
 }
 
-.resume-blog .blog-text {
+.blog.blog-text {
   margin-bottom: 30px;
   position: relative;
   width: 100%;
@@ -973,70 +1088,70 @@ fieldset[disabled] .btn-default.active {
 }
 
 @media screen and (max-width: 768px) {
-  .resume-blog .blog-text {
+  .blog.blog-text {
     padding: 10px;
   }
 }
 
-.resume-blog .blog-text span {
+.blog.blog-text span {
   display: inline-block;
   margin-bottom: 20px;
   font-size: 18px !important;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.resume-blog .blog-text .stuff {
+.blog.blog-text .stuff {
   margin: 0;
   padding: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 20px;
 }
 
-.resume-blog .blog-text .stuff li {
+.blog.blog-text .stuff li {
   list-style: none;
   display: inline-block;
   margin-left: 10px;
 }
 
 @media screen and (max-width: 768px) {
-  .resume-blog .blog-text .stuff li {
+  .blog.blog-text .stuff li {
     font-size: 14px;
   }
 }
 
-.resume-blog .blog-text .stuff li:first-child {
+.blog.blog-text .stuff li:first-child {
   margin-left: 0;
 }
 
-.resume-blog .blog-text .stuff li:last-child {
+.blog.blog-text .stuff li:last-child {
   float: right;
 }
 
-.resume-blog .blog-text .stuff li:last-child a {
+.blog.blog-text .stuff li:last-child a {
   color: #000;
 }
 
-.resume-blog .blog-text .stuff li:last-child i {
+.blog.blog-text .stuff li:last-child i {
   padding-right: 0;
   padding-left: 10px;
 }
 
-.resume-blog .blog-text .stuff li i {
+.blog.blog-text .stuff li i {
   font-size: 14px;
   padding-right: 5px;
 }
 
-.resume-blog .blog-text h3 {
+.blog.blog-text h3 {
   font-size: 24px;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-.resume-blog .blog-text h3 a {
+.blog.blog-text h3 a {
   color: #263959;
 }
 
-#resume-consult {
+#consult {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1047,153 +1162,6 @@ fieldset[disabled] .btn-default.active {
   -moz-flex-wrap: wrap;
   width: 100%;
   float: left;
-}
-
-#resume-consult .video,
-#resume-consult .choose {
-  display: inline-block;
-}
-
-@media screen and (max-width: 768px) {
-
-  #resume-consult .video,
-  #resume-consult .choose {
-    width: 100% !important;
-  }
-}
-
-#resume-consult .video {
-  display: table;
-  width: 50%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-}
-
-@media screen and (max-width: 768px) {
-  #resume-consult .video {
-    display: none;
-  }
-}
-
-#resume-consult .choose {
-  width: 50%;
-  padding: 4em;
-}
-
-@media screen and (max-width: 768px) {
-  #resume-consult .choose {
-    width: 100%;
-    padding: 4em 1em;
-  }
-}
-
-.resume-video {
-  overflow: hidden;
-}
-
-@media screen and (max-width: 992px) {
-  .resume-video {
-    height: 450px;
-  }
-}
-
-.resume-video .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#resume-footer {
-  padding: 50px 0;
-  float: left;
-  width: 100%;
-}
-
-#resume-footer p:last-child {
-  margin-bottom: 0;
-}
-
-.contact-info {
-  margin-bottom: 4em;
-  padding: 0;
-}
-
-.contact-info li {
-  list-style: none;
-  margin: 0 0 20px 0;
-  position: relative;
-  padding-left: 40px;
-  color: #000;
-}
-
-.contact-info li i {
-  position: absolute;
-  top: 0.3em;
-  left: 0;
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.contact-info li a {
-  color: #000;
-}
-
-.form-control {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 300;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.form-control:focus,
-.form-control:active {
-  box-shadow: none;
-  border: 2px solid rgba(0, 0, 0, 0.8);
-}
-
-input[type='text'] {
-  height: 50px;
-}
-
-.form-group {
-  margin-bottom: 30px;
-}
-
-#map {
-  width: 100%;
-  height: 500px;
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-  #map {
-    height: 200px;
-  }
 }
 
 .gototop {
@@ -1239,7 +1207,7 @@ input[type='text'] {
   outline: none;
 }
 
-.resume-dowload-icons {
+.dowload-icons {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1291,193 +1259,4 @@ input[type='text'] {
   background: url(../images/loader.gif) center no-repeat #fff;
 }
 
-
-
 /*# sourceMappingURL=style.css.map */
-
-/* ==========================================================================Section Styles========================================================================== */
-.section-padding {
-  padding: 100px 0 100px
-}
-
-@media screen and (max-width:767px) {
-  .section-padding {
-    padding: 50px 0 50px !important;
-  }
-}
-
-.wrapper {
-  height: 650px;
-}
-
-.nopadding {
-  padding: 0;
-}
-
-.row {
-  margin: 0;
-}
-
-
-/* =======================================================
-*
-* 	Service
-*
-* ======================================================= */
-#service .row {
-  display: flex;
-  flex-wrap: wrap;
-  /* Ensures responsiveness on smaller screens */
-}
-
-#service .col-md-3 {
-  display: flex;
-  /* Enables flexbox for children */
-  flex-direction: column;
-  /* Aligns children vertically */
-  justify-content: space-between;
-  /* Distributes space evenly */
-}
-
-.service-thumb {
-  flex: 1;
-  /* Makes each service-thumb take equal height */
-  padding: 20px 10px;
-  /* Optional: adjust as needed for spacing */
-  box-sizing: border-box;
-  /* Ensures padding does not affect height */
-  text-align: center;
-}
-
-.service-thumb i {
-  font-size: 30px;
-  /* Adjust icon size */
-  color: white;
-}
-
-#service .bg-blue li,
-.bg-dark-blue li,
-.bg-orange li {
-  list-style-type: none;
-  /* Remove bullet points from list items */
-  text-align: start;
-  color: white;
-  font-size: 14px;
-}
-
-#service .bg-white li {
-  list-style-type: none;
-  /* Remove bullet points from list items */
-  text-align: start;
-  color: #263959;
-  font-size: 14px;
-}
-
-.section-btn {
-  background-color: transparent;
-  border: 3px solid #232B2B;
-  border-radius: 100px;
-  color: #232B2B;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1.6px;
-  padding: 12px 36px;
-  margin-top: 42px;
-  transition: all 0.4s ease-in-out;
-  text-transform: uppercase;
-}
-
-.section-btn:hover {
-  background: #49618C;
-  border-color: transparent;
-  color: #ffffff;
-}
-
-.parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
-}
-
-.section-title {
-  position: relative;
-  padding-bottom: 22px;
-}
-
-#service {
-  position: relative;
-}
-
-#service .container,
-.container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-#service {
-  text-align: start;
-}
-
-#service .background-image {
-  background-position: 50% 50% !important;
-  background-size: cover !important;
-  width: 100%;
-  height: 100%;
-  min-height: 75vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#service .bg-blue {
-  background: #49618C;
-}
-
-#service .bg-orange {
-  background: #EF885F;
-}
-
-#service .bg-white {
-  background: white;
-}
-
-#service .bg-dark-blue {
-  background: #263959;
-}
-
-#service .bg-blue h3,
-.bg-dark-blue h3,
-.bg-orange h3 {
-  font-size: 22px;
-  line-height: 24px;
-  padding-bottom: 4px;
-  text-align: center;
-  font-weight: 600;
-  color: white;
-}
-
-#service .bg-white h3 {
-  font-size: 22px;
-  line-height: 24px;
-  padding-bottom: 4px;
-  text-align: center;
-  font-weight: 600;
-  color: #263959;
-}
-
-#service h4 {
-  font-size: 20px;
-  line-height: 32px;
-  padding-bottom: 6px;
-  text-align: center;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .service-thumb {
-    height: auto;
-    /* Allow height to adjust on smaller screens */
-  }
-}
