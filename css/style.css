@@ -173,7 +173,7 @@ span {
 
 @media screen and (max-width: 768px) {
   .cover {
-    background-image: linear-gradient(to bottom right, #1D2738 50%, white);
+    background-image: url(../images/header-bg-mobile.jpg);
   }
 }
 
