@@ -857,10 +857,14 @@ span {
 .bg-orange li {
   text-align: start;
   color: white;
+  font-size: small;
+  padding-bottom: 0.75rem;
 }
 
 #service .bg-white li {
   text-align: start;
+  font-size: small;
+  padding-bottom: 0.75rem;
 }
 
 .parallax-section {
