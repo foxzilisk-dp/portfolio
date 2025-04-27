@@ -758,6 +758,22 @@ span {
   }
 }
 
+
+
+.timeline-title-start {
+  margin-top: unset;
+  font-size: 20px;
+  text-align: start;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-title-start {
+    text-align: start;
+    font-size: 18px;
+  }
+}
+
 .company {
   display: block;
   margin-bottom: 20px;
